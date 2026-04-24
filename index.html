@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 10 Classmates System</title>
+    
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#ebf2ff] min-h-screen flex items-center justify-center p-6">
+
+    <div class="w-full max-w-md bg-white rounded-[2rem] shadow-xl p-10">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-black text-[#4569e7] flex justify-center items-center gap-2">
+                <span class="w-8 h-8 bg-[#4569e7] rounded-md"></span>
+                Classmates System!
+            </h1>
+            <p class="text-gray-400 mt-2 italic text-sm">Organize your class records</p>
+        </div>
+
+        <div class="space-y-3 mb-6">
+            <input type="text" id="name" placeholder="Name" class="w-full px-5 py-3 bg-[#eef3fb] border-none rounded-xl outline-none focus:ring-2 focus:ring-blue-400">
+            <input type="text" id="section" placeholder="Section" class="w-full px-5 py-3 bg-[#eef3fb] border-none rounded-xl outline-none focus:ring-2 focus:ring-blue-400">
+            <input type="text" id="subject" placeholder="Favorite Subject" class="w-full px-5 py-3 bg-[#eef3fb] border-none rounded-xl outline-none focus:ring-2 focus:ring-blue-400">
+            
+            <div class="flex gap-3 pt-2">
+                <button py-click="add_classmate_event" class="flex-1 bg-[#336cf2] hover:bg-blue-700 text-white font-bold py-3 rounded-xl transition-all shadow-md active:scale-95">
+                    Add
+                </button>
+                <button py-click="display_list" class="flex-1 bg-[#099a6e] hover:bg-emerald-700 text-white font-bold py-3 rounded-xl transition-all shadow-md active:scale-95">
+                    Show List
+                </button>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border border-gray-100 shadow-inner min-h-[120px]">
+            <h2 class="font-bold text-gray-700 mb-3 flex items-center gap-2">
+                <span>📋</span> List
+            </h2>
+            <div id="output" class="space-y-2 text-gray-600 text-sm">
+                <p class="text-gray-400 italic text-center">System initializing...</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="py" src="./main.py" config='{ "packages": ["numpy", "matplotlib"] }'></script>
+
+</body>
+</html>
